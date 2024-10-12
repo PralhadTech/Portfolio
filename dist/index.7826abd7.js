@@ -2963,29 +2963,36 @@ var _home = require("./src/components/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _footer = require("./src/components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _contact = require("./src/components/Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "relative z-10",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 12,
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 5
     }, undefined);
 };
@@ -2994,7 +3001,7 @@ const container = document.getElementById("app");
 const root = (0, _client.createRoot)(container);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 20,
+    lineNumber: 22,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3005,7 +3012,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./src/components/Navbar":"4U1ks","./index.css":"giGSC","./src/components/Home":"5rQzE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/components/Footer":"2OVeV"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./src/components/Navbar":"4U1ks","./index.css":"giGSC","./src/components/Home":"5rQzE","./src/components/Footer":"2OVeV","./src/components/Contact":"25EXR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27922,6 +27929,491 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["APLPM","1xC6H","2Ew96"], "2Ew96", "parcelRequire2041")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"25EXR":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ac13 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ac13.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _browser = require("@emailjs/browser");
+var _browserDefault = parcelHelpers.interopDefault(_browser);
+var _constant = require("../../constant");
+var _s = $RefreshSig$();
+const Contact = ()=>{
+    _s();
+    const form = (0, _react.useRef)();
+    const sendEmail = (e)=>{
+        e.preventDefault();
+        (0, _browserDefault.default).sendForm((0, _constant.Service_ID), (0, _constant.Template_ID), form.current, {
+            publicKey: (0, _constant.Public_KEY)
+        }).then(()=>{
+            console.log("SUCCESS!");
+        }, (error)=>{
+            console.log("FAILED...", error.text);
+        });
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex justify-center items-center min-h-screen bg-gray-100",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+            ref: form,
+            onSubmit: sendEmail,
+            className: "w-full max-w-md bg-white p-8 rounded-lg shadow-lg",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    className: "text-2xl font-bold mb-6 text-center text-gray-700",
+                    children: "Contact Us"
+                }, void 0, false, {
+                    fileName: "src/components/Contact.jsx",
+                    lineNumber: 32,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "mb-4",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            className: "block text-gray-700 text-sm font-bold mb-2",
+                            children: "Name"
+                        }, void 0, false, {
+                            fileName: "src/components/Contact.jsx",
+                            lineNumber: 36,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            className: "w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500",
+                            type: "text",
+                            name: "from_name",
+                            placeholder: "Your name"
+                        }, void 0, false, {
+                            fileName: "src/components/Contact.jsx",
+                            lineNumber: 39,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Contact.jsx",
+                    lineNumber: 35,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "mb-4",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            className: "block text-gray-700 text-sm font-bold mb-2",
+                            children: "Email"
+                        }, void 0, false, {
+                            fileName: "src/components/Contact.jsx",
+                            lineNumber: 47,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            className: "w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500",
+                            type: "email",
+                            name: "fromemail",
+                            placeholder: "Your email"
+                        }, void 0, false, {
+                            fileName: "src/components/Contact.jsx",
+                            lineNumber: 50,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Contact.jsx",
+                    lineNumber: 46,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "mb-6",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            className: "block text-gray-700 text-sm font-bold mb-2",
+                            children: "Message"
+                        }, void 0, false, {
+                            fileName: "src/components/Contact.jsx",
+                            lineNumber: 58,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
+                            className: "w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500",
+                            name: "message",
+                            placeholder: "Your message",
+                            rows: "4"
+                        }, void 0, false, {
+                            fileName: "src/components/Contact.jsx",
+                            lineNumber: 61,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Contact.jsx",
+                    lineNumber: 57,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex justify-center",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:shadow-outline cursor-pointer",
+                        type: "submit",
+                        value: "Send"
+                    }, void 0, false, {
+                        fileName: "src/components/Contact.jsx",
+                        lineNumber: 69,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Contact.jsx",
+                    lineNumber: 68,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Contact.jsx",
+            lineNumber: 27,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Contact.jsx",
+        lineNumber: 26,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Contact, "dQhLC9DEDZP9Q6oVJIWRdCVKDdw=");
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$ac13.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@emailjs/browser":"kbSqr","../../constant":"hVDs4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kbSqr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "init", ()=>(0, _init.init));
+parcelHelpers.export(exports, "send", ()=>(0, _send.send));
+parcelHelpers.export(exports, "sendForm", ()=>(0, _sendForm.sendForm));
+parcelHelpers.export(exports, "EmailJSResponseStatus", ()=>(0, _emailJSResponseStatus.EmailJSResponseStatus));
+var _emailJSResponseStatus = require("./models/EmailJSResponseStatus");
+var _init = require("./methods/init/init");
+var _send = require("./methods/send/send");
+var _sendForm = require("./methods/sendForm/sendForm");
+exports.default = {
+    init: (0, _init.init),
+    send: (0, _send.send),
+    sendForm: (0, _sendForm.sendForm),
+    EmailJSResponseStatus: (0, _emailJSResponseStatus.EmailJSResponseStatus)
+};
+
+},{"./models/EmailJSResponseStatus":"oZ06T","./methods/init/init":"lqGq1","./methods/send/send":"m7CoX","./methods/sendForm/sendForm":"a1Cpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"oZ06T":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "EmailJSResponseStatus", ()=>EmailJSResponseStatus);
+class EmailJSResponseStatus {
+    constructor(_status = 0, _text = "Network Error"){
+        this.status = _status;
+        this.text = _text;
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lqGq1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "init", ()=>init);
+var _store = require("../../store/store");
+var _buildOptions = require("../../utils/buildOptions/buildOptions");
+const init = (options, origin = "https://api.emailjs.com")=>{
+    if (!options) return;
+    const opts = (0, _buildOptions.buildOptions)(options);
+    (0, _store.store).publicKey = opts.publicKey;
+    (0, _store.store).blockHeadless = opts.blockHeadless;
+    (0, _store.store).storageProvider = opts.storageProvider;
+    (0, _store.store).blockList = opts.blockList;
+    (0, _store.store).limitRate = opts.limitRate;
+    (0, _store.store).origin = opts.origin || origin;
+};
+
+},{"../../store/store":"3eehJ","../../utils/buildOptions/buildOptions":"4eXBo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3eehJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "store", ()=>store);
+var _createWebStorage = require("../utils/createWebStorage/createWebStorage");
+const store = {
+    origin: "https://api.emailjs.com",
+    blockHeadless: false,
+    storageProvider: (0, _createWebStorage.createWebStorage)()
+};
+
+},{"../utils/createWebStorage/createWebStorage":"jt24v","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jt24v":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createWebStorage", ()=>createWebStorage);
+const createWebStorage = ()=>{
+    if (typeof localStorage === "undefined") return;
+    return {
+        get: (key)=>Promise.resolve(localStorage.getItem(key)),
+        set: (key, value)=>Promise.resolve(localStorage.setItem(key, value)),
+        remove: (key)=>Promise.resolve(localStorage.removeItem(key))
+    };
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4eXBo":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "buildOptions", ()=>buildOptions);
+const buildOptions = (options)=>{
+    if (!options) return {};
+    // support compatibility with SDK v3
+    if (typeof options === "string") return {
+        publicKey: options
+    };
+    // eslint-disable-next-line @typescript-eslint/no-base-to-string
+    if (options.toString() === "[object Object]") return options;
+    return {};
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"m7CoX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "send", ()=>send);
+var _store = require("../../store/store");
+var _sendPost = require("../../api/sendPost");
+var _buildOptions = require("../../utils/buildOptions/buildOptions");
+var _validateParams = require("../../utils/validateParams/validateParams");
+var _validateTemplateParams = require("../../utils/validateTemplateParams/validateTemplateParams");
+var _isHeadless = require("../../utils/isHeadless/isHeadless");
+var _headlessError = require("../../errors/headlessError/headlessError");
+var _isBlockedValueInParams = require("../../utils/isBlockedValueInParams/isBlockedValueInParams");
+var _blockedEmailError = require("../../errors/blockedEmailError/blockedEmailError");
+var _isLimitRateHit = require("../../utils/isLimitRateHit/isLimitRateHit");
+var _limitRateError = require("../../errors/limitRateError/limitRateError");
+const send = async (serviceID, templateID, templateParams, options)=>{
+    const opts = (0, _buildOptions.buildOptions)(options);
+    const publicKey = opts.publicKey || (0, _store.store).publicKey;
+    const blockHeadless = opts.blockHeadless || (0, _store.store).blockHeadless;
+    const storageProvider = opts.storageProvider || (0, _store.store).storageProvider;
+    const blockList = {
+        ...(0, _store.store).blockList,
+        ...opts.blockList
+    };
+    const limitRate = {
+        ...(0, _store.store).limitRate,
+        ...opts.limitRate
+    };
+    if (blockHeadless && (0, _isHeadless.isHeadless)(navigator)) return Promise.reject((0, _headlessError.headlessError)());
+    (0, _validateParams.validateParams)(publicKey, serviceID, templateID);
+    (0, _validateTemplateParams.validateTemplateParams)(templateParams);
+    if (templateParams && (0, _isBlockedValueInParams.isBlockedValueInParams)(blockList, templateParams)) return Promise.reject((0, _blockedEmailError.blockedEmailError)());
+    if (await (0, _isLimitRateHit.isLimitRateHit)(location.pathname, limitRate, storageProvider)) return Promise.reject((0, _limitRateError.limitRateError)());
+    const params = {
+        lib_version: "4.4.1",
+        user_id: publicKey,
+        service_id: serviceID,
+        template_id: templateID,
+        template_params: templateParams
+    };
+    return (0, _sendPost.sendPost)("/api/v1.0/email/send", JSON.stringify(params), {
+        "Content-type": "application/json"
+    });
+};
+
+},{"../../store/store":"3eehJ","../../api/sendPost":"3pmzm","../../utils/buildOptions/buildOptions":"4eXBo","../../utils/validateParams/validateParams":"iiuvO","../../utils/validateTemplateParams/validateTemplateParams":"5fzBp","../../utils/isHeadless/isHeadless":"gRPJ4","../../errors/headlessError/headlessError":"cvzAa","../../utils/isBlockedValueInParams/isBlockedValueInParams":"2NbMP","../../errors/blockedEmailError/blockedEmailError":"jfpsi","../../utils/isLimitRateHit/isLimitRateHit":"1a6fm","../../errors/limitRateError/limitRateError":"2tHS0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3pmzm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "sendPost", ()=>sendPost);
+var _emailJSResponseStatus = require("../models/EmailJSResponseStatus");
+var _store = require("../store/store");
+const sendPost = async (url, data, headers = {})=>{
+    const response = await fetch((0, _store.store).origin + url, {
+        method: "POST",
+        headers,
+        body: data
+    });
+    const message = await response.text();
+    const responseStatus = new (0, _emailJSResponseStatus.EmailJSResponseStatus)(response.status, message);
+    if (response.ok) return responseStatus;
+    throw responseStatus;
+};
+
+},{"../models/EmailJSResponseStatus":"oZ06T","../store/store":"3eehJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iiuvO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "validateParams", ()=>validateParams);
+const validateParams = (publicKey, serviceID, templateID)=>{
+    if (!publicKey || typeof publicKey !== "string") throw "The public key is required. Visit https://dashboard.emailjs.com/admin/account";
+    if (!serviceID || typeof serviceID !== "string") throw "The service ID is required. Visit https://dashboard.emailjs.com/admin";
+    if (!templateID || typeof templateID !== "string") throw "The template ID is required. Visit https://dashboard.emailjs.com/admin/templates";
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5fzBp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "validateTemplateParams", ()=>validateTemplateParams);
+const validateTemplateParams = (templateParams)=>{
+    // eslint-disable-next-line @typescript-eslint/no-base-to-string
+    if (templateParams && templateParams.toString() !== "[object Object]") throw "The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/";
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gRPJ4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "isHeadless", ()=>isHeadless);
+const isHeadless = (navigator)=>{
+    return navigator.webdriver || !navigator.languages || navigator.languages.length === 0;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cvzAa":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "headlessError", ()=>headlessError);
+var _emailJSResponseStatus = require("../../models/EmailJSResponseStatus");
+const headlessError = ()=>{
+    return new (0, _emailJSResponseStatus.EmailJSResponseStatus)(451, "Unavailable For Headless Browser");
+};
+
+},{"../../models/EmailJSResponseStatus":"oZ06T","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2NbMP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "isBlockedValueInParams", ()=>isBlockedValueInParams);
+var _validateBlockListParams = require("../validateBlockListParams/validateBlockListParams");
+const isBlockListDisabled = (options)=>{
+    return !options.list?.length || !options.watchVariable;
+};
+const getValue = (data, name)=>{
+    return data instanceof FormData ? data.get(name) : data[name];
+};
+const isBlockedValueInParams = (options, params)=>{
+    if (isBlockListDisabled(options)) return false;
+    (0, _validateBlockListParams.validateBlockListParams)(options.list, options.watchVariable);
+    const value = getValue(params, options.watchVariable);
+    if (typeof value !== "string") return false;
+    return options.list.includes(value);
+};
+
+},{"../validateBlockListParams/validateBlockListParams":"gLzPj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gLzPj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "validateBlockListParams", ()=>validateBlockListParams);
+const validateBlockListParams = (list, watchVariable)=>{
+    if (!Array.isArray(list)) throw "The BlockList list has to be an array";
+    if (typeof watchVariable !== "string") throw "The BlockList watchVariable has to be a string";
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jfpsi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "blockedEmailError", ()=>blockedEmailError);
+var _emailJSResponseStatus = require("../../models/EmailJSResponseStatus");
+const blockedEmailError = ()=>{
+    return new (0, _emailJSResponseStatus.EmailJSResponseStatus)(403, "Forbidden");
+};
+
+},{"../../models/EmailJSResponseStatus":"oZ06T","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1a6fm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "isLimitRateHit", ()=>isLimitRateHit);
+var _validateLimitRateParams = require("../validateLimitRateParams/validateLimitRateParams");
+const getLeftTime = async (id, throttle, storage)=>{
+    const lastTime = Number(await storage.get(id) || 0);
+    return throttle - Date.now() + lastTime;
+};
+const isLimitRateHit = async (defaultID, options, storage)=>{
+    if (!options.throttle || !storage) return false;
+    (0, _validateLimitRateParams.validateLimitRateParams)(options.throttle, options.id);
+    const id = options.id || defaultID;
+    const leftTime = await getLeftTime(id, options.throttle, storage);
+    if (leftTime > 0) return true;
+    await storage.set(id, Date.now().toString());
+    return false;
+};
+
+},{"../validateLimitRateParams/validateLimitRateParams":"6r7mT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6r7mT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "validateLimitRateParams", ()=>validateLimitRateParams);
+const validateLimitRateParams = (throttle, id)=>{
+    if (typeof throttle !== "number" || throttle < 0) throw "The LimitRate throttle has to be a positive number";
+    if (id && typeof id !== "string") throw "The LimitRate ID has to be a non-empty string";
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2tHS0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "limitRateError", ()=>limitRateError);
+var _emailJSResponseStatus = require("../../models/EmailJSResponseStatus");
+const limitRateError = ()=>{
+    return new (0, _emailJSResponseStatus.EmailJSResponseStatus)(429, "Too Many Requests");
+};
+
+},{"../../models/EmailJSResponseStatus":"oZ06T","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"a1Cpe":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "sendForm", ()=>sendForm);
+var _store = require("../../store/store");
+var _sendPost = require("../../api/sendPost");
+var _buildOptions = require("../../utils/buildOptions/buildOptions");
+var _validateForm = require("../../utils/validateForm/validateForm");
+var _validateParams = require("../../utils/validateParams/validateParams");
+var _isHeadless = require("../../utils/isHeadless/isHeadless");
+var _headlessError = require("../../errors/headlessError/headlessError");
+var _isBlockedValueInParams = require("../../utils/isBlockedValueInParams/isBlockedValueInParams");
+var _blockedEmailError = require("../../errors/blockedEmailError/blockedEmailError");
+var _isLimitRateHit = require("../../utils/isLimitRateHit/isLimitRateHit");
+var _limitRateError = require("../../errors/limitRateError/limitRateError");
+const findHTMLForm = (form)=>{
+    return typeof form === "string" ? document.querySelector(form) : form;
+};
+const sendForm = async (serviceID, templateID, form, options)=>{
+    const opts = (0, _buildOptions.buildOptions)(options);
+    const publicKey = opts.publicKey || (0, _store.store).publicKey;
+    const blockHeadless = opts.blockHeadless || (0, _store.store).blockHeadless;
+    const storageProvider = (0, _store.store).storageProvider || opts.storageProvider;
+    const blockList = {
+        ...(0, _store.store).blockList,
+        ...opts.blockList
+    };
+    const limitRate = {
+        ...(0, _store.store).limitRate,
+        ...opts.limitRate
+    };
+    if (blockHeadless && (0, _isHeadless.isHeadless)(navigator)) return Promise.reject((0, _headlessError.headlessError)());
+    const currentForm = findHTMLForm(form);
+    (0, _validateParams.validateParams)(publicKey, serviceID, templateID);
+    (0, _validateForm.validateForm)(currentForm);
+    const formData = new FormData(currentForm);
+    if ((0, _isBlockedValueInParams.isBlockedValueInParams)(blockList, formData)) return Promise.reject((0, _blockedEmailError.blockedEmailError)());
+    if (await (0, _isLimitRateHit.isLimitRateHit)(location.pathname, limitRate, storageProvider)) return Promise.reject((0, _limitRateError.limitRateError)());
+    formData.append("lib_version", "4.4.1");
+    formData.append("service_id", serviceID);
+    formData.append("template_id", templateID);
+    formData.append("user_id", publicKey);
+    return (0, _sendPost.sendPost)("/api/v1.0/email/send-form", formData);
+};
+
+},{"../../store/store":"3eehJ","../../api/sendPost":"3pmzm","../../utils/buildOptions/buildOptions":"4eXBo","../../utils/validateForm/validateForm":"8cmNG","../../utils/validateParams/validateParams":"iiuvO","../../utils/isHeadless/isHeadless":"gRPJ4","../../errors/headlessError/headlessError":"cvzAa","../../utils/isBlockedValueInParams/isBlockedValueInParams":"2NbMP","../../errors/blockedEmailError/blockedEmailError":"jfpsi","../../utils/isLimitRateHit/isLimitRateHit":"1a6fm","../../errors/limitRateError/limitRateError":"2tHS0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8cmNG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "validateForm", ()=>validateForm);
+const validateForm = (form)=>{
+    if (!form || form.nodeName !== "FORM") throw "The 3rd parameter is expected to be the HTML form element or the style selector of the form";
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hVDs4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Service_ID", ()=>Service_ID);
+parcelHelpers.export(exports, "Template_ID", ()=>Template_ID);
+parcelHelpers.export(exports, "Public_KEY", ()=>Public_KEY);
+const Service_ID = "service_nqnfo1q";
+const Template_ID = "template_hixokfc";
+const Public_KEY = "P0W1-XmFrI6MKYfw7";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["APLPM","1xC6H","2Ew96"], "2Ew96", "parcelRequire2041")
 
 //# sourceMappingURL=index.7826abd7.js.map
