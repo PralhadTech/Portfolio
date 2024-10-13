@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,14 +26,22 @@ const Navbar = () => {
 
         {/* Navigation Links (hidden on small screens, visible on medium and above) */}
         <ul className="hidden md:flex space-x-6 items-center">
-          <li className="hover:text-blue-400 cursor-pointer">Home</li>
-          <li className="hover:text-blue-400 cursor-pointer">Projects</li>
-          <li className="hover:text-blue-400 cursor-pointer">Blogs</li>
-          <li>
-            <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300">
-              Contact Me
-            </button>
-          </li>
+          <Link to="/">
+            <li className="hover:text-blue-400 cursor-pointer">Home</li>
+          </Link>
+          <Link to="/projects">
+            <li className="hover:text-blue-400 cursor-pointer">Projects</li>
+          </Link>
+          <Link to="/blogs">
+            <li className="hover:text-blue-400 cursor-pointer">Blogs</li>
+          </Link>
+          <Link to="/contact">
+            <li>
+              <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300">
+                Contact Me
+              </button>
+            </li>
+          </Link>
         </ul>
       </nav>
 
